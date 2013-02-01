@@ -1,0 +1,29 @@
+{
+    "name": "sail/useragent",
+    "type": "library",
+    "description": "browser detection library",
+    "homepage":"http://sailthru.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Ulfo",
+            "email": "rainelemental@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Sailthru",
+            "email": "info@sailthru.com",
+            "role": "Company"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { 
+            "Rain": "src/"
+        }
+    }
+}
+
