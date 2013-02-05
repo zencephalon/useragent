@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         strict="true"
+         verbose="false"
+         >
+    <testsuites>
+        <testsuite name="Sailthru UserAgent Unit Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    
+    <logging>
+        <!--
+        <log type="coverage-clover" target="build/logs/clover.xml" />
+        <log type="coverage-html" target="build/coverage" title="Sailthru www" /> -->
+    </logging>
+    
+    
+
+</phpunit>
