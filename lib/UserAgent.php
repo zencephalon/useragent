@@ -114,6 +114,10 @@ class UserAgent
         $this->parser->setUA( $ua );
     }
     
+    public function __toString(){
+        return $this->parser->getUA();
+    } 
+   
 }
 
 // -- end
