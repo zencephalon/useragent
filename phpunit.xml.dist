@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
-         colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnFailure="false"
-         syntaxCheck="true"
-         strict="true"
-         verbose="true"
-         bootstrap="vendor/autoload.php"
-         >
+<phpunit bootstrap="tests/bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="Sailthru UserAgent Unit Test Suite">
-            <directory>./Tests/</directory>
+        <testsuite name="Monolog Test Suite">
+            <directory>tests/Useragent/</directory>
         </testsuite>
     </testsuites>
-    
+
     <filter>
         <whitelist>
-            <directory>./</directory>
-            <exclude>
-                <directory>./Resources</directory>
-                <directory>./Tests</directory>
-                <directory>./vendor</directory>
-            </exclude>
+            <directory suffix=".php">src/Useragent/</directory>
         </whitelist>
     </filter>
-
-</phpunit>              
+</phpunit>
