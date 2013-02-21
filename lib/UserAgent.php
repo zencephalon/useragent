@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sail\UserAgent;
 
 
@@ -11,7 +10,8 @@ namespace Sail\UserAgent;
  *  the device type, the operating system and more.
  * 
  *  @example 
- *  $useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.56 Safari/537.17"
+ *  $useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) 
+ *  AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.56 Safari/537.17"
  *  $ua = new \Sail\UserAgent( $useragent );
  *  echo $ua->getBrowser();  // Chrome
  *  echo $ua->getVersion();  // 24.0.1312.56
@@ -38,7 +38,8 @@ class UserAgent
      * Set the useragent
      * @param string $ua
      */
-    public function __construct( ParserAbstract $parser ){
+    public function __construct(ParserAbstract $parser)
+    {
         $this->parser = $parser;
     }
 
@@ -48,8 +49,9 @@ class UserAgent
      * Get all the browser information
      * @param boolean $to_array false to get the result as object, true as array
      */
-    public function getBrowserInfo( $to_array = true ){
-        $this->parser->getBrowserInfo( $to_array );
+    public function getBrowserInfo($to_array = true)
+    {
+        $this->parser->getBrowserInfo($to_array);
     }
     
     
@@ -57,7 +59,8 @@ class UserAgent
     /**
      * Get the browser name
      */
-    public function getBrowser(){
+    public function getBrowser()
+    {
         return $this->parser->getBrowser();
     }
 
@@ -66,7 +69,8 @@ class UserAgent
     /**
      * Get the os name
      */
-    public function getVersion(){
+    public function getVersion()
+    {
         return $this->parser->getVersion();
     }
 
@@ -75,7 +79,8 @@ class UserAgent
     /**
      * Get the os name
      */
-    public function getOS(){
+    public function getOS()
+    {
         return $this->parser->getOS();
     }
 
@@ -84,7 +89,8 @@ class UserAgent
     /**
      * Return true if is a mobile device
      */
-    public function isMobile(){
+    public function isMobile()
+    {
         return $this->parser->isMobile();
     }
 
@@ -93,7 +99,8 @@ class UserAgent
     /**
      * Return the platform type, for example iPad, iPhone, Macintosh
      */
-    public function getPlatform(){
+    public function getPlatform()
+    {
         return $this->parser->getPlatform();
     }
 
@@ -101,7 +108,8 @@ class UserAgent
     /**
      *  get UA
      */
-    public function getUA(){
+    public function getUA()
+    {
         return $this->parser->getUA();
     }
 
@@ -109,8 +117,9 @@ class UserAgent
     /**
      *  set UA
      */
-    public function setUA( string $ua ){
-        $this->parser->setUA( $ua );
+    public function setUA(string $ua)
+    {
+        $this->parser->setUA($ua);
     }
 
 
@@ -118,10 +127,8 @@ class UserAgent
      * Return the user agent string
      * @return string
      */
-    public function __toString(){
+    public function __toString()
+    {
         return $this->parser->getUA();
-    } 
-   
+    }
 }
-
-// -- end
