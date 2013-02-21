@@ -77,7 +77,6 @@ class UserAgent
      */
     public function getOS(){
         return $this->parser->getOS();
-
     }
 
 
@@ -113,7 +112,12 @@ class UserAgent
     public function setUA( string $ua ){
         $this->parser->setUA( $ua );
     }
-    
+
+
+    /**
+     * Return the user agent string
+     * @return string
+     */
     public function __toString(){
         return $this->parser->getUA();
     } 
