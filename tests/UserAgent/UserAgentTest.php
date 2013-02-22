@@ -1,5 +1,8 @@
 <?php
 
+use Sailthru\UserAgent;
+use Sailthru\UserAgent\Parser\SailParser;
+
 class Sail_UserAgentTest extends PHPUnit_Framework_TestCase {
 
     // ua obj
@@ -9,25 +12,25 @@ class Sail_UserAgentTest extends PHPUnit_Framework_TestCase {
     
     // setup 
     public function setup(){
-        $this->ua = new UserAgent( $this->useragent );
+
+        $parser = new SailParser( $this->useragent );
+        $this->ua = new UserAgent( $parser );
+
     }
 
     // test getUA
     public function testGetUA(){
-        $useragent = $this->ua->getUA();
-        $this->assertTrue( $useragent === $this->user_agent );
+        $this->assertTrue( $this->ua->getUA() == $this->useragent );
     }
 
-    // test setUA
-    public function testSetUA(){
-        $useragent = $this->ua->setUA("test");
-        $this->assertTrue( "test" === $this->user_agent );
+    // test toString
+    public function testToString(){
+        $this->assertTrue( $this->ua == $this->useragent );
     }
     
-    // test setUA
-    public function testToString(){
-        $useragent = $this->ua;
-        $this->assertTrue( $useragent === $this->user_agent );
+    // test getbrowser
+    public function testGetBrowser(){
+        $this->assertTrue( $this->ua->getBrowser() == "Chrome" );
     }
     
     
