@@ -1,6 +1,7 @@
 <?php
 
 namespace Sailthru\UserAgent\Parser;
+
 use Sailthru\UserAgent\ParserAbstract;
 
 Class SailParser extends ParserAbstract
@@ -21,12 +22,16 @@ Class SailParser extends ParserAbstract
     protected $version;
     
     protected $mobile_browsers = array(
-                'iPad', 'iPhone', 'Android', 'BlackBerry', 'Palm', 
+                'iPad', 'iPhone', 'Android', 'BlackBerry', 'Palm',
                 'Windows Smartphone', 'Other Mobile'
               );
 
-    public function __construct($ua)
+    public function __construct($ua = null)
     {
+        if( empty($ua) ){
+            $ua = $_SERVER['HTTP_USER_AGENT'];
+        }
+
         parent::__construct($ua);
         $this->parse();
     }
