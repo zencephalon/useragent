@@ -14,7 +14,7 @@ Abstract Class ParserAbstract implements ParserInterface
     }
 
     // set the useragent
-    final public function setUA(string $ua)
+    final public function setUA(\string $ua)
     {
         $this->ua = $ua;
     }

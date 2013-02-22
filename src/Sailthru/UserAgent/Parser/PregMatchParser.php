@@ -1,6 +1,7 @@
 <?php
 
-namespace Sailthru\UserAgent;
+namespace Sailthru\UserAgent\Parser;
+use Sailthru\UserAgent\ParserAbstract;
 
 Class PregMatchParser extends ParserAbstract
 {
@@ -26,7 +27,7 @@ Class PregMatchParser extends ParserAbstract
     }
 
     // get the browser info
-    public function getBrowserInfo(boolean $to_array)
+    public function getBrowserInfo(\boolean $to_array)
     {
         
     }
@@ -56,6 +57,11 @@ Class PregMatchParser extends ParserAbstract
         $this->parse();
         return $this->platform;
     }
+    
+    public function isMobile(){
+        $this->parse();
+        return $this->is_mobile;
+    }
 
     // parse the ua string
     protected function parse()
@@ -70,6 +76,7 @@ Class PregMatchParser extends ParserAbstract
         preg_match_all("#\(.*?\)|[^\s]*/[^\s]*#", $this->ua, $match);
 
         $this->platform     = $match[0][0];
+        $this->is_mobile    = true;
         $this->os           = $match[0][1];
         $this->engine       = $match[0][2];
         $this->feature      = $match[0][3];

@@ -6,13 +6,13 @@ Interface ParserInterface
 {
 
     // set the useragent
-    public function setUA(string $ua);
+    public function setUA(\string $ua);
 
     // get the useragent
     public function getUA();
 
     // get the browser info
-    public function getBrowserInfo(boolean $to_array);
+    public function getBrowserInfo(\boolean $to_array);
 
     // get the browser
     public function getBrowser();
@@ -23,6 +23,10 @@ Interface ParserInterface
     // get the Operating System
     public function getOS();
 
-    // get the Operating System
+    // get the device (iphone, ipad)
     public function getPlatform();
+
+    // get the device (iphone, ipad)
+    public function isMobile();
+
 }
