@@ -1,7 +1,6 @@
 <?php
 
-namespace Sail\UserAgent;
-
+namespace Sailthru;
 
 /**
  *  Sail\UserAgent
@@ -38,7 +37,7 @@ class UserAgent
      * Set the useragent
      * @param string $ua
      */
-    public function __construct(ParserAbstract $parser)
+    public function __construct( UserAgent\ParserAbstract $parser)
     {
         $this->parser = $parser;
     }

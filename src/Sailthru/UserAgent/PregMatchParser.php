@@ -1,6 +1,6 @@
 <?php
 
-namespace Sail\UserAgent;
+namespace Sailthru\UserAgent;
 
 Class PregMatchParser extends ParserAbstract
 {

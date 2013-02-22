@@ -1,6 +1,6 @@
 <?php
 
-namespace Sail\UserAgent;
+namespace Sailthru\UserAgent;
 
 Abstract Class ParserAbstract implements ParserInterface
 {
