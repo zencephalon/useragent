@@ -189,4 +189,5 @@ Class SailParser extends ParserAbstract
 
         list($this->browser, $this->version) = explode("/", $this->platform);
     }
+
 }

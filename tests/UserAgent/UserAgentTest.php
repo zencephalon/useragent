@@ -7,9 +7,9 @@ class Sail_UserAgentTest extends PHPUnit_Framework_TestCase {
 
     // ua obj
     protected $ua;
-    
+
     protected $useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.56 Safari/537.17";
-    
+
     // setup 
     public function setup(){
 
