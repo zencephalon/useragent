@@ -96,7 +96,7 @@ Class SailParser extends ParserAbstract
             return 'Safari';
         } else if ($check_agent('opera')) {
             return 'Opera';
-        } else if ($check_agent('outlook') || $check_agent('msoffice') ) {
+        } else if ($check_agent('outlook')) {
             return 'Microsoft Outlook';
         } else if ($check_agent('msie')) {
             return 'Internet Explorer';
